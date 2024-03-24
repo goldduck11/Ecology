@@ -19,7 +19,7 @@ print(df.loc['KZ']['country'])
 print()
 print(df.loc['KZ'])
 """
-tab_a = pd.DataFrame({63:
+tab_а = pd.DataFrame({63:
                           [100,
                            107,
                            109,
@@ -109,9 +109,9 @@ tab_a = pd.DataFrame({63:
                              107
                              ], },
                      index=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-print(tab_a)
+print(tab_а)
 
-tab_b = pd.DataFrame({1:
+tab_б = pd.DataFrame({1:
                           [15,
                            10,
                            4,
@@ -156,9 +156,9 @@ tab_b = pd.DataFrame({1:
                       },
                      index=['длина', 'ширина', 'высота',
                             ])
-print(tab_b)
+print(tab_б)
 
-tab_c = pd.DataFrame({63:
+tab_в = pd.DataFrame({63:
                           [104,
                            107,
                            88,
@@ -256,9 +256,9 @@ tab_c = pd.DataFrame({63:
 
                              ], },
                      index=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-print(tab_c)
+print(tab_в)
 
-tab_d = pd.DataFrame({1:
+tab_г = pd.DataFrame({1:
                           [4,
                            10
                            ],
@@ -291,9 +291,9 @@ tab_d = pd.DataFrame({1:
                            ],
                       },
                      index=['длина', 'высота'])
-print(tab_d)
+print(tab_г)
 
-tab_i = pd.DataFrame({63:[100],
+tab_д = pd.DataFrame({63: [100],
                       125: [120],
                       250: [130],
                       500: [130],
@@ -302,4 +302,50 @@ tab_i = pd.DataFrame({63:[100],
                       4000: [115],
                       8000: [110], },
                      index=['Уровень звукового давления, дБ'])
-print(tab_i)
+print(tab_д)
+
+tab_е = pd.DataFrame({1:
+                          [2,
+                           1,
+                           3
+                           ],
+                      2: [2.5,
+                          1.5,
+                          3
+                          ],
+                      3: [3,
+                          2,
+                          4
+                          ],
+                      4: [2,
+                          1.5,
+                          2
+                          ],
+                      5: [2,
+                          2,
+                          3
+                          ],
+                      6: [2,
+                          1.5,
+                          3
+                          ],
+                      7: [2.5,
+                          2,
+                          3
+                          ],
+                      8: [3,
+                          2,
+                          4
+                          ],
+                      9: [2,
+                          2,
+                          4
+                          ],
+                      10: [2,
+                           2,
+                           3
+                           ],
+                      },
+                     index=['l', 'b', 'h',
+                            ])
+print(tab_е)
