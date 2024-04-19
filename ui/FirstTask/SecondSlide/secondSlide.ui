@@ -17,24 +17,24 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>120</y>
-      <width>551</width>
-      <height>131</height>
+      <x>220</x>
+      <y>90</y>
+      <width>731</width>
+      <height>191</height>
      </rect>
     </property>
     <property name="text">
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>../../firstImage.png</pixmap>
+     <pixmap>../../../image/firstTask/secondSlide/seconImage(2).jpg</pixmap>
     </property>
    </widget>
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
       <x>120</x>
-      <y>280</y>
+      <y>270</y>
       <width>101</width>
       <height>41</height>
      </rect>
@@ -70,7 +70,7 @@
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>22</height>
+     <height>33</height>
     </rect>
    </property>
   </widget>

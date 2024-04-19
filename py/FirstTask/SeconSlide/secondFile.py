@@ -2,7 +2,6 @@ import sys
 
 from PySide6.QtWidgets import QMainWindow, QApplication
 
-from py.PropertyFile.PropertySelection import PropertySelection
 from ui.FirstTask.FirstSlide.ui_firstSlide import Ui_MainWindow
 
 
@@ -13,8 +12,9 @@ class MyFirstWindow(QMainWindow):
 		self.ui.setupUi(self)
 
 		self.show()
-		variant = PropertySelection().get_Variant()
 
+		text = self.ui.lineEdit.text()
+		
 
 
 

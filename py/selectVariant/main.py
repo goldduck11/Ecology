@@ -3,6 +3,7 @@ from py.FirstTask.FirstSlide import firstWindow
 
 from PySide6.QtWidgets import QApplication, QMainWindow
 
+from py.PropertyFile.PropertySelection import PropertySelection
 from ui.selectVariant.ui_VariantSelectDesignerUI import Ui_MainWindow
 
 class MyWindow(QMainWindow):
@@ -16,6 +17,7 @@ class MyWindow(QMainWindow):
 
     def select_variant(self):
         self.textVariant = str(self.ui.BoxSelectVariant.currentText())
+        p = PropertySelection().set_Variant(self.textVariant)
         firstWindow.MyFirstWindow()
 
 
