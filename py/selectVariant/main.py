@@ -18,7 +18,9 @@ class MyWindow(QMainWindow):
     def select_variant(self):
         self.textVariant = str(self.ui.BoxSelectVariant.currentText())
         p = PropertySelection().set_Variant(self.textVariant)
-        firstWindow.MyFirstWindow()
+        self.destroy()
+        self.newWindow = firstWindow.MyFirstWindow()
+        self.newWindow.show()
 
 
 
