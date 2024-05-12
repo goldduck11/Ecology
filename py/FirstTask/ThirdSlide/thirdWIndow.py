@@ -13,9 +13,10 @@ from data import tab_4_plus, tab_4_minus
 class MyFirstWindow(QMainWindow):
 	text: str
 	gerts: str
-	Lp: str
+	Lp: float
 	units: int
 	docade: int
+	L: float
 
 	def __init__(self):
 		super(MyFirstWindow, self).__init__()
@@ -44,25 +45,33 @@ class MyFirstWindow(QMainWindow):
 			else:
 				return None  # Если в извлеченной целой части есть символы кроме цифр, возвращаем None
 		else:
-			# Если десятичная точка не найдена, возвращаем само число как целое число
-			return int(num)
+			integer_part = num_str[:-1]  # Извлекаем все символы до десятичной точки
+
+			# Преобразуем извлеченную целую часть в целое число
+			if integer_part.isdigit():
+				new_number = int(integer_part)
+				единицы = int(num_str[-1:])
+				return new_number, единицы
+			else:
+				return None  # Если в извлеченной целой части есть символы кроме цифр, возвращаем None
 
 	def continueTask(self):
 		self.text = self.ui.lineEdit.text()
 		P = PropertySelection()
 		self.Lp = P.get_Lp()
 		self.docade, self.units = self.extract_integer_part(self.Lp)
-		for i in range(1, 4):
-			if (self.Lp > 0):
-
-
-
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    window = MyFirstWindow()
-    window.show()
-    sys.exit(app.exec())
-
-
-
+		print(tab_4_plus.iloc[self.docade, self.units])
+		self.L = self.Lp + 10 * math.log10(
+			tab_4_plus.iloc[self.docade, self.units] * ((1.2 / 8 * math.pi) + (1.1 / 18 * math.pi) + (1.0 / 32 * math.pi)) + (
+						4 * 3 / P.get_B()))
+		print(round(self.L, 2))
+		if (round(self.L, 2) != round(float(self.text.replace(",", ".")), 2)):
+			self.msg = QMessageBox()
+			self.msg.setIcon(QMessageBox.Icon.Critical)
+			self.msg.setText("Ошибка!")
+			self.msg.setInformativeText("Был введён неверный ответ")  # Установка информационного текста
+			self.msg.setWindowTitle("Ошибка")
+			self.msg.setFixedWidth(400)
+			self.msg.exec()  # Показываем QMessageBox
+			return
+		print("Ответ верный в 3 задании")
