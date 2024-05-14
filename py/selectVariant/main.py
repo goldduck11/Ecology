@@ -4,6 +4,7 @@ from py.FirstTask.FirstSlide import firstWindow
 from PySide6.QtWidgets import QApplication, QMainWindow
 
 from py.PropertyFile.PropertySelection import PropertySelection
+from py.taskSelect import taskSelect
 from ui.selectVariant.ui_VariantSelectDesignerUI import Ui_MainWindow
 
 class MyWindow(QMainWindow):
@@ -20,7 +21,7 @@ class MyWindow(QMainWindow):
         self.p = PropertySelection()
         self.p.set_Variant(self.textVariant)
         self.destroy()
-        self.newWindow = firstWindow.MyFirstWindow()
+        self.newWindow = taskSelect.New()
         self.newWindow.show()
 
 

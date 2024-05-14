@@ -1,9 +1,12 @@
 import sys
 
-from py.FirstTask.FirstSlide import firstWindow
-
 from PySide6.QtWidgets import QApplication, QMainWindow
+
+from py.SecondTask.ui_B import B
 from ui.taskSelect.ui_taskSelect import Ui_MainWindow
+from py.FirstTask.FirstSlide.firstWindow import MyFirstWindow
+from py.SecondTask.ui_firstSlide import FirstSlide
+
 
 class New(QMainWindow):
     def __init__(self):
@@ -11,10 +14,19 @@ class New(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-    def btn_two_clicked(self):
-        self.ui = firstWindow.Ui_MainWindow
-        self.ui.setupUi(self)
-        self.show()
+        self.ui.task_1.clicked.connect(self.first_task)
+        self.ui.task_2.clicked.connect(self.second_task)
+
+    def first_task(self):
+        self.new_window = MyFirstWindow()
+        self.new_window.show()
+        self.destroy()
+
+    def second_task(self):
+        self.new_window = B()
+        self.new_window.show()
+        self.destroy()
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
