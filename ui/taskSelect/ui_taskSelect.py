@@ -3,7 +3,7 @@
 ################################################################################
 ## Form generated from reading UI file 'taskSelect.ui'
 ##
-## Created by: Qt User Interface Compiler version 6.6.3
+## Created by: Qt User Interface Compiler version 6.6.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
@@ -37,9 +37,6 @@ class Ui_MainWindow(object):
         self.task_2 = QPushButton(self.centralwidget)
         self.task_2.setObjectName(u"task_2")
         self.task_2.setGeometry(QRect(220, 220, 181, 31))
-        self.task_3 = QPushButton(self.centralwidget)
-        self.task_3.setObjectName(u"task_3")
-        self.task_3.setGeometry(QRect(220, 290, 181, 31))
         MainWindow.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(MainWindow)
@@ -52,6 +49,5 @@ class Ui_MainWindow(object):
         self.task_selection_lable.setText(QCoreApplication.translate("MainWindow", u"\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0437\u0430\u0434\u0430\u043d\u0438\u0435 \u0434\u043b\u044f \u043f\u0440\u0430\u043a\u0442\u0438\u0447\u0435\u0441\u043a\u0438\u0445 \u0437\u0430\u043d\u044f\u0442\u0438\u0439", None))
         self.task_1.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0434\u0430\u043d\u0438\u0435 1", None))
         self.task_2.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0434\u0430\u043d\u0438\u0435 2", None))
-        self.task_3.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0430\u0434\u0430\u043d\u0438\u0435 3", None))
     # retranslateUi
 

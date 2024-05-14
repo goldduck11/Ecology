@@ -1,14 +1,12 @@
 import math
-import sys
 
-from PySide6 import QtWidgets
-from PySide6.QtWidgets import QMainWindow, QApplication, QMessageBox
+from PySide6.QtCore import Slot
+from PySide6.QtWidgets import QMainWindow, QMessageBox
 
+from data import tab_б, tab_2, tab_3
 from py.FirstTask.SeconSlide import secondFile
 from py.PropertyFile.PropertySelection import PropertySelection
 from ui.FirstTask.ThirdSlide.ui_thirdSlide import Ui_MainWindow
-
-from data import tab_б, tab_2, tab_3
 
 
 class MyFirstWindow(QMainWindow):
@@ -24,9 +22,12 @@ class MyFirstWindow(QMainWindow):
 		self.ui.setupUi(self)
 
 		self.show()
+		self.ui.lineEdit_2.setReadOnly(True)
+		self.ui.comboBox.currentIndexChanged.connect(self.on_combobox_changed)
 		self.ui.pushButton.clicked.connect(self.continueTask)
 
 	def continueTask(self):
+
 		self.text = str(self.ui.lineEdit.text())
 		self.gerts = str(self.ui.comboBox.currentText())
 		self.otn = str(self.ui.lineEdit_2.text())
@@ -94,3 +95,11 @@ class MyFirstWindow(QMainWindow):
 		self.msg.exec()
 		self.newWindow = secondFile.MyFirstWindow()
 		self.newWindow.show()
+
+	@Slot(int)
+	def on_combobox_changed(self, index):
+		gerts = self.ui.comboBox.currentText()
+		if int(gerts) > 1000:
+			self.ui.lineEdit_2.setReadOnly(False)
+		else:
+			self.ui.lineEdit_2.setReadOnly(True)

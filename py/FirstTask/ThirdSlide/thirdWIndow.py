@@ -74,4 +74,5 @@ class MyFirstWindow(QMainWindow):
 			self.msg.setFixedWidth(400)
 			self.msg.exec()  # Показываем QMessageBox
 			return
-		print("Ответ верный в 3 задании")
+
+		print("Верный вариант 3")
