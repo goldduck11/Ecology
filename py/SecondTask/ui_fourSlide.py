@@ -34,6 +34,7 @@ class FourSlide(QMainWindow):
         Rorg = R + R1 - R0
 
         if round(Rorg, 2) == round(float(self.text.replace(",", ".")), 2):
+            self.destroy()
             self.msg = QMessageBox()
             self.msg.setIcon(QMessageBox.Information)
             self.msg.setInformativeText("Вы успешно прошли тестирование!")  # Установка информационного текста
