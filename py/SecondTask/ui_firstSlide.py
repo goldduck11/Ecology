@@ -21,14 +21,13 @@ class FirstSlide(QMainWindow):
 
         self.ui.pushButton.clicked.connect(self.continueTask)
         self.ui.comboBox_2.currentIndexChanged.connect(self.on_combobox_changed)
-        self.ui.comboBox.currentIndexChanged.connect(self.on_combobox_changed)
 
     @Slot(int)
     def on_combobox_changed(self, index):
-        gerts = self.ui.comboBox.currentText()
+        P = PropertySelection()
         selected_value = self.ui.comboBox_2.currentIndex()
         if selected_value == 0: return
-        self.ui.label_7.setText(str(tab_1[int(gerts)][selected_value - 1]))
+        self.ui.label_7.setText(str(tab_1[int(P.get_Gerts())][selected_value - 1]))
 
     def continueTask(self):
         self.text = str(self.ui.lineEdit.text())
@@ -45,7 +44,7 @@ class FirstSlide(QMainWindow):
         self.variant_number = int(P.get_Variant()) - 1
 
         # Используйте .iloc[] для доступа к данным с использованием числовых индексов столбцов
-        value = tab_в[int(self.ui.comboBox.currentText())][self.variant_number + 1]  # Длина соответствующая частоте variant_number]
+        value = tab_в[int(P.get_Gerts())][self.variant_number + 1]  # Длина соответствующая частоте variant_number]
 
         # Используйте .iloc[] для доступа к данным с использованием числовых индексов столбцов
         length = tab_г.iloc[0, self.variant_number]  # Длина соответствующая частоте variant_numberant_number

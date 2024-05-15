@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'B.ui'
+## Form generated from reading UI file 'b.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.6.3
 ##
@@ -119,6 +119,9 @@ class Ui_MainWindow(object):
         self.label_10.setObjectName(u"label_10")
         self.label_10.setGeometry(QRect(670, 480, 101, 41))
         self.label_10.setFont(font1)
+        self.label_11 = QLabel(self.centralwidget)
+        self.label_11.setObjectName(u"label_11")
+        self.label_11.setGeometry(QRect(190, 220, 271, 16))
         MainWindow.setCentralWidget(self.centralwidget)
         self.statusbar = QStatusBar(MainWindow)
         self.statusbar.setObjectName(u"statusbar")
@@ -177,5 +180,6 @@ class Ui_MainWindow(object):
 
         self.label_9.setText(QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043a\u0430\u0437\u0430\u0442\u0435\u043b\u044c \u0437\u0430\u0442\u0443\u0445\u0430\u043d\u0438\u044f \u0437\u0432\u0443\u043a\u0430 \u0432 \u0432\u043e\u0437\u0434\u0443\u0445\u0435 \u043d\u0430 \u0435\u0434\u0438\u043d\u0438\u0446\u0443 \u0434\u043b\u0438\u043d\u044b, 1/\u043c:", None))
         self.label_10.setText("")
+        self.label_11.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0442\u0432\u0435\u0442 \u043e\u043a\u0440\u0443\u0433\u043b\u0438\u0442\u044c \u0434\u043e 2-\u0445 \u0437\u043d\u0430\u043a\u043e\u0432 \u043f\u043e\u0441\u043b\u0435 \u0437\u0430\u043f\u044f\u0442\u043e\u0439.", None))
     # retranslateUi
 

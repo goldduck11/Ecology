@@ -7,6 +7,10 @@ class PropertySelection:
 	_L: float
 	_Alfa: float
 	_Lp: float
+	R: float
+	R1: float
+	R0: float
+	Sorg: int
 
 	def __new__(cls):
 		if not hasattr(cls, 'instance'):
@@ -62,3 +66,27 @@ class PropertySelection:
 
 	def set_Lp(self, Lp):
 		self._Lp = Lp
+
+	def set_R(self, R):
+		self.R = R
+
+	def get_R(self):
+		return self.R
+
+	def set_R1(self, R1):
+		self.R1 = R1
+
+	def get_R1(self):
+		return self.R1
+
+	def set_R0(self, R0):
+		self.R0 = R0
+
+	def get_R0(self):
+		return self.R0
+
+	def set_Sorg(self, Sorg):
+		self.Sorg = Sorg
+
+	def get_Sorg(self):
+		return self.Sorg

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'secondSlide.ui'
+## Form generated from reading UI file 'secondslide.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.6.3
 ##
@@ -60,25 +60,25 @@ class Ui_MainWindow(object):
         self.comboBox_2.addItem("")
         self.comboBox_2.addItem("")
         self.comboBox_2.setObjectName(u"comboBox_2")
-        self.comboBox_2.setGeometry(QRect(370, 420, 381, 41))
+        self.comboBox_2.setGeometry(QRect(350, 420, 431, 61))
         self.comboBox_2.setFont(font)
         self.comboBox_2.setStyleSheet(u"")
         self.comboBox_2.setMinimumContentsLength(0)
         self.label_5 = QLabel(self.centralwidget)
         self.label_5.setObjectName(u"label_5")
-        self.label_5.setGeometry(QRect(30, 470, 321, 41))
+        self.label_5.setGeometry(QRect(10, 490, 321, 41))
         self.label_5.setFont(font)
         self.label_6 = QLabel(self.centralwidget)
         self.label_6.setObjectName(u"label_6")
-        self.label_6.setGeometry(QRect(30, 420, 341, 41))
+        self.label_6.setGeometry(QRect(10, 420, 341, 41))
         self.label_6.setFont(font)
         self.label_7 = QLabel(self.centralwidget)
         self.label_7.setObjectName(u"label_7")
-        self.label_7.setGeometry(QRect(340, 480, 71, 31))
+        self.label_7.setGeometry(QRect(320, 500, 71, 31))
         self.label_7.setFont(font)
         self.lineEdit_3 = QLineEdit(self.centralwidget)
         self.lineEdit_3.setObjectName(u"lineEdit_3")
-        self.lineEdit_3.setGeometry(QRect(640, 300, 131, 31))
+        self.lineEdit_3.setGeometry(QRect(640, 260, 131, 31))
         self.lineEdit_3.setFont(font1)
         self.label_8 = QLabel(self.centralwidget)
         self.label_8.setObjectName(u"label_8")
@@ -121,13 +121,17 @@ class Ui_MainWindow(object):
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"\u041e\u0442\u0432\u0435\u0442:", None))
         self.label.setText("")
         self.pushButton.setText(QCoreApplication.translate("MainWindow", u"\u041f\u0440\u043e\u0434\u043e\u043b\u0436\u0438\u0442\u044c", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u0422\u043e\u043b\u0449\u0438\u043d\u0430 \u0441\u043b\u043e\u044f \u0417\u041f\u041c \u0432 \u043c\u043c:", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u0422\u043e\u043b\u0449\u0438\u043d\u0430 \u0441\u043b\u043e\u044f \u0417\u041f\u041c \u0432 \u043c:", None))
         self.comboBox_2.setItemText(0, "")
-        self.comboBox_2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u041f\u043b\u0438\u0442\u044b \u043c\u0438\u043d\u0435\u0440\u0430\u043b\u043e\u0432\u0430\u0442\u043d\u044b\u0435 \u043d\u0430 \u0444\u0435\u043d\u043e\u043b\u044c\u043d\u043e\u0439 \u0441\u0432\u044f\u0437\u043a\u0435", None))
-        self.comboBox_2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u0425\u043e\u043b\u0441\u0442 \u0438\u0437 \u0441\u0443\u043f\u0435\u0440\u0442\u043e\u043d\u043a\u043e\u0433\u043e \u0441\u0442\u0435\u043a\u043b\u043e\u0432\u043e\u043b\u043e\u043a\u043d\u0430", None))
-        self.comboBox_2.setItemText(3, QCoreApplication.translate("MainWindow", u"\u0425\u043e\u043b\u0441\u0442 \u0438\u0437 \u0441\u0443\u043f\u0435\u0440\u0442\u043e\u043d\u043a\u043e\u0433\u043e \u0431\u0430\u0437\u0430\u043b\u044c\u0442\u043e\u0432\u043e\u0433\u043e \u0432\u043e\u043b\u043e\u043a\u043d\u0430", None))
+        self.comboBox_2.setItemText(1, QCoreApplication.translate("MainWindow", u"\u041f\u043b\u0438\u0442\u044b \u043c\u0438\u043d\u0435\u0440\u0430\u043b\u043e\u0432\u0430\u0442\u043d\u044b\u0435 \u043d\u0430 \n"
+"\u0444\u0435\u043d\u043e\u043b\u044c\u043d\u043e\u0439 \u0441\u0432\u044f\u0437\u043a\u0435", None))
+        self.comboBox_2.setItemText(2, QCoreApplication.translate("MainWindow", u"\u0425\u043e\u043b\u0441\u0442 \u0438\u0437 \u0441\u0443\u043f\u0435\u0440\u0442\u043e\u043d\u043a\u043e\u0433\u043e \n"
+"\u0441\u0442\u0435\u043a\u043b\u043e\u0432\u043e\u043b\u043e\u043a\u043d\u0430", None))
+        self.comboBox_2.setItemText(3, QCoreApplication.translate("MainWindow", u"\u0425\u043e\u043b\u0441\u0442 \u0438\u0437 \u0441\u0443\u043f\u0435\u0440\u0442\u043e\u043d\u043a\u043e\u0433\u043e \n"
+"\u0431\u0430\u0437\u0430\u043b\u044c\u0442\u043e\u0432\u043e\u0433\u043e \u0432\u043e\u043b\u043e\u043a\u043d\u0430", None))
         self.comboBox_2.setItemText(4, QCoreApplication.translate("MainWindow", u"\u0410\u0422\u041c-1", None))
-        self.comboBox_2.setItemText(5, QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043b\u0438\u0443\u0440\u0438\u0442\u0430\u043d\u043e\u0432\u044b\u0439 \u044d\u043b\u0430\u0441\u0442\u0438\u0447\u043d\u044b\u0439 \u043f\u043e\u0440\u043e\u043f\u043b\u0430\u0441\u0442 \u043c\u0430\u0440\u043a\u0438 \u041f\u041f\u0423-\u042d\u0422", None))
+        self.comboBox_2.setItemText(5, QCoreApplication.translate("MainWindow", u"\u041f\u043e\u043b\u0438\u0443\u0440\u0438\u0442\u0430\u043d\u043e\u0432\u044b\u0439 \u044d\u043b\u0430\u0441\u0442\u0438\u0447\u043d\u044b\u0439\n"
+"\u043f\u043e\u0440\u043e\u043f\u043b\u0430\u0441\u0442 \u043c\u0430\u0440\u043a\u0438 \u041f\u041f\u0423-\u042d\u0422", None))
 
         self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u041a\u043e\u044d\u0444\u0444\u0438\u0446\u0438\u0435\u043d\u0442 \u0437\u0430\u0442\u0443\u0445\u0430\u043d\u0438\u044f, 1/\u043c:", None))
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u0417\u0432\u0443\u043a\u043e\u043f\u043e\u0433\u043b\u043e\u0449\u0430\u044e\u0449\u0438\u0439 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b:", None))
