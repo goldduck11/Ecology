@@ -17,8 +17,8 @@
    <widget class="QLabel" name="label_2">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>280</y>
+      <x>70</x>
+      <y>300</y>
       <width>101</width>
       <height>41</height>
      </rect>
@@ -35,8 +35,8 @@
    <widget class="QLineEdit" name="lineEdit">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>280</y>
+      <x>150</x>
+      <y>310</y>
       <width>451</width>
       <height>31</height>
      </rect>
@@ -50,8 +50,8 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>120</y>
+      <x>200</x>
+      <y>140</y>
       <width>371</width>
       <height>111</height>
      </rect>
@@ -61,6 +61,73 @@
     </property>
     <property name="pixmap">
      <pixmap>../../image/secondTask/secondFormyla.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>610</x>
+      <y>310</y>
+      <width>151</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Продолжить</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>761</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>0</width>
+      <height>0</height>
+     </size>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>15</pointsize>
+      <bold>false</bold>
+      <kerning>false</kerning>
+     </font>
+    </property>
+    <property name="lineWidth">
+     <number>0</number>
+    </property>
+    <property name="midLineWidth">
+     <number>0</number>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Рассчитать звукоизоляцию проектируемого ограждения&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::AutoText</enum>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_10">
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>340</y>
+      <width>271</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Ответ округлить до 2-х знаков после запятой.</string>
     </property>
    </widget>
   </widget>

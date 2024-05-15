@@ -42,7 +42,7 @@ class secondSlide(QMainWindow):
         self.variant_number = int(P.get_Variant()) - 1
 
         m_n = self.ui.lineEdit_4.text()
-        if not m_n or m_n.isdigit() == False:
+        if not m_n:
             self.msg = QMessageBox()
             self.msg.setIcon(QMessageBox.Critical)
             self.msg.setText("Ошибка!")
@@ -53,8 +53,19 @@ class secondSlide(QMainWindow):
             self.msg.exec()  # Показываем QMessageBox
             return
 
+        if m_n.isdigit() == False:
+            self.msg = QMessageBox()
+            self.msg.setIcon(QMessageBox.Critical)
+            self.msg.setText("Ошибка!")
+            self.msg.setInformativeText(
+                "Поле 'Поверхностная плотность материала ограждения' некорректно заполнено!")  # Установка информационного текста
+            self.msg.setWindowTitle("Ошибка")
+            self.msg.setFixedWidth(400)
+            self.msg.exec()  # Показываем QMessageBox
+            return
+
         m_nc = self.ui.lineEdit_3.text()
-        if not m_nc or m_nc.isdigit() == False:
+        if not m_nc:
             self.msg = QMessageBox()
             self.msg.setIcon(QMessageBox.Critical)
             self.msg.setText("Ошибка!")
@@ -65,8 +76,19 @@ class secondSlide(QMainWindow):
             self.msg.exec()  # Показываем QMessageBox
             return
 
-        omega = self.ui.lineEdit_2.text()
-        if not m_nc or m_nc.isdigit() == False:
+        if m_nc.isdigit() == False:
+            self.msg = QMessageBox()
+            self.msg.setIcon(QMessageBox.Critical)
+            self.msg.setText("Ошибка!")
+            self.msg.setInformativeText(
+                "Поле 'Поверхностная плотность звукопоглощающего материала' некорректно заполнено!")  # Установка информационного текста
+            self.msg.setWindowTitle("Ошибка")
+            self.msg.setFixedWidth(400)
+            self.msg.exec()  # Показываем QMessageBox
+            return
+
+        omega = float(self.ui.lineEdit_2.text().replace(",", "."))
+        if not omega:
             self.msg = QMessageBox()
             self.msg.setIcon(QMessageBox.Critical)
             self.msg.setText("Ошибка!")
@@ -78,6 +100,8 @@ class secondSlide(QMainWindow):
             return
 
         R1 = 8.7 * float(self.betta) * float(omega) + 20 * math.log10((float(m_n) + float(m_nc)) / float(m_n))
+
+        P.set_R1(R1)
 
         if round(R1, 2) == round(float(self.text.replace(",", ".")), 2):
             self.newWindow = threeSlide()

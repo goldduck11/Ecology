@@ -1,15 +1,13 @@
-import math
-
 from PySide6.QtWidgets import QMainWindow, QMessageBox
 
+from ui.SecondTask.ui_fourslide import Ui_MainWindow
+
 from py.PropertyFile.PropertySelection import PropertySelection
-from py.SecondTask.ui_fourSlide import FourSlide
-from ui.SecondTask.ui_threeSlide import Ui_MainWindow
 
 
-class threeSlide(QMainWindow):
+class FourSlide(QMainWindow):
     def __init__(self):
-        super(threeSlide, self).__init__()
+        super(FourSlide, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
@@ -29,18 +27,19 @@ class threeSlide(QMainWindow):
             return
         self.variant_number = int(P.get_Variant()) - 1
 
-        R = float(self.ui.lineEdit_3.text().replace(",", "."))
-        S0 = float(self.ui.lineEdit_2.text().replace(",", "."))
+        R = round(P.get_R(), 2)
+        R1 = round(P.get_R1(), 2)
+        R0 = round(P.get_R0(), 2)
 
-        R0 = 10 * math.log10(S0 / P.get_Sorg() * math.pow(10, 0.1 * float(R)))
+        Rorg = R + R1 - R0
 
-        P.set_R(R)
-        P.set_R0(R0)
-
-        if round(R0, 2) == round(float(self.text.replace(",", ".")), 2):
-            self.newWindow = FourSlide()
-            self.newWindow.show()
-            self.destroy()
+        if round(Rorg, 2) == round(float(self.text.replace(",", ".")), 2):
+            self.msg = QMessageBox()
+            self.msg.setIcon(QMessageBox.Information)
+            self.msg.setInformativeText("Вы успешно прошли тестирование!")  # Установка информационного текста
+            self.msg.setWindowTitle("Поздравляем")
+            self.msg.setFixedWidth(400)
+            self.msg.exec()  # Показываем QMessageBox
         else:
             self.msg = QMessageBox()
             self.msg.setIcon(QMessageBox.Critical)

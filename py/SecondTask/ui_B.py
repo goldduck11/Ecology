@@ -79,6 +79,7 @@ class B(QMainWindow):
         # Вычислите значение self.S используя полученные данные
         self.S = 2 * length_value * width_value + 2 * width_value * height_value + 2 * length_value * height_value
         S = length * height
+        P.set_Sorg(S)
         if 63 <= int(gerts) <= 1000:
             alfa = self.alfa0
         elif 2000 <= int(gerts) <= 8000:
