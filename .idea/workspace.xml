@@ -4,13 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="19efda1c-a9d8-4540-bae5-f5979dc4ecba" name="Changes" comment="hehe commit">
+    <list default="true" id="19efda1c-a9d8-4540-bae5-f5979dc4ecba" name="Changes" comment="hie hie commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/FirstTask/FirstSlide/firstWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/FirstTask/FirstSlide/firstWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/FirstTask/SeconSlide/secondFile.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/FirstTask/SeconSlide/secondFile.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/py/FirstTask/ThirdSlide/thirdWIndow.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/FirstTask/ThirdSlide/thirdWIndow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/py/taskSelect/taskSelect.py" beforeDir="false" afterPath="$PROJECT_DIR$/py/taskSelect/taskSelect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/FirstTask/FirstSlide/firstSlide.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/FirstTask/FirstSlide/firstSlide.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/FirstTask/FirstSlide/ui_firstSlide.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/FirstTask/FirstSlide/ui_firstSlide.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/FirstTask/FourthSlide/fourthSlide.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/FirstTask/FourthSlide/fourthSlide.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/FirstTask/FourthSlide/ui_fourthSlide.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/FirstTask/FourthSlide/ui_fourthSlide.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ui/FirstTask/ThirdSlide/thirdSlide.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/FirstTask/ThirdSlide/thirdSlide.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/taskSelect/taskSelect.ui" beforeDir="false" afterPath="$PROJECT_DIR$/ui/taskSelect/taskSelect.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ui/taskSelect/ui_taskSelect.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/taskSelect/ui_taskSelect.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ui/FirstTask/ThirdSlide/ui_thirdSlide.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/FirstTask/ThirdSlide/ui_thirdSlide.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -251,7 +256,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715515989163</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="hie hie commit">
+      <option name="closed" value="true" />
+      <created>1715710486189</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1715710486189</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -300,7 +313,19 @@
     <MESSAGE value="add window" />
     <MESSAGE value="haha commit" />
     <MESSAGE value="hehe commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="hehe commit" />
+    <MESSAGE value="hie hie commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="hie hie commit" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/py/FirstTask/ThirdSlide/thirdWIndow.py</url>
+          <line>64</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Ecology$python_exe.coverage" NAME="python.exe Coverage Results" MODIFIED="1713450148277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

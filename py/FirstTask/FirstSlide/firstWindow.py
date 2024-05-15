@@ -1,6 +1,7 @@
 import math
 
 from PySide6.QtCore import Slot
+from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QMainWindow, QMessageBox
 
 from data import tab_б, tab_2, tab_3
@@ -9,7 +10,7 @@ from py.PropertyFile.PropertySelection import PropertySelection
 from ui.FirstTask.ThirdSlide.ui_thirdSlide import Ui_MainWindow
 
 
-class MyFirstWindow(QMainWindow):
+class firstSlide(QMainWindow):
 	text: str
 	gerts: str
 	B: float
@@ -17,11 +18,11 @@ class MyFirstWindow(QMainWindow):
 	alfa: float
 
 	def __init__(self):
-		super(MyFirstWindow, self).__init__()
+		super(firstSlide, self).__init__()
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
+		self.ui.label.setPixmap(QPixmap("../../image/firstTask/thirdSlide/thirdImage.png"))
 
-		self.show()
 		self.ui.lineEdit_2.setReadOnly(True)
 		self.ui.comboBox.currentIndexChanged.connect(self.on_combobox_changed)
 		self.ui.pushButton.clicked.connect(self.continueTask)
@@ -93,7 +94,7 @@ class MyFirstWindow(QMainWindow):
 		self.msg.setWindowTitle("Ошибка")
 		self.msg.setFixedWidth(400)
 		self.msg.exec()
-		self.newWindow = secondFile.MyFirstWindow()
+		self.newWindow = secondFile.secondSlide()
 		self.newWindow.show()
 
 	@Slot(int)

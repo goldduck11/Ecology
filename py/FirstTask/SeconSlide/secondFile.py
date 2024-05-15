@@ -1,6 +1,7 @@
 import math
 import sys
 
+from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QMainWindow, QApplication, QMessageBox
 
 from py.FirstTask.ThirdSlide import thirdWIndow
@@ -11,18 +12,17 @@ from ui.FirstTask.FirstSlide.ui_firstSlide import Ui_MainWindow
 from data import tab_а
 
 
-class MyFirstWindow(QMainWindow):
+class secondSlide(QMainWindow):
 	X: float
 	text: str
 	L: float
 	Lp: float
 
 	def __init__(self):
-		super(MyFirstWindow, self).__init__()
+		super(secondSlide, self).__init__()
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
-
-		self.show()
+		self.ui.label.setPixmap(QPixmap("../../image/firstTask/firstSlide/photo_2024-05-15_21-24-20.jpg"))
 
 		self.ui.continueButton.clicked.connect(self.continueTask)
 
@@ -49,7 +49,7 @@ class MyFirstWindow(QMainWindow):
 			print(self.L)
 		else:
 			print("Ошибка: Некорректные индексы строк или столбцов")
-		if (round(self.L, 2) != round(float(self.text), 2)):
+		if (round(self.L, 2) != round(float(self.text.replace(",", ".")), 2)):
 			self.msg = QMessageBox()
 			self.msg.setIcon(QMessageBox.Critical)
 			self.msg.setText("Ошибка!")
@@ -60,6 +60,6 @@ class MyFirstWindow(QMainWindow):
 			return
 		P.set_Lp(self.Lp)
 		self.destroy()
-		self.newWindow = thirdWIndow.MyFirstWindow()
+		self.newWindow = thirdWIndow.thirdSlide()
 		self.newWindow.show()
 		print("Правильный ответ!")

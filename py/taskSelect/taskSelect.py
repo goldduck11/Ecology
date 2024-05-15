@@ -4,7 +4,7 @@ from PySide6.QtWidgets import QApplication, QMainWindow
 
 from py.SecondTask.ui_B import B
 from ui.taskSelect.ui_taskSelect import Ui_MainWindow
-from py.FirstTask.FirstSlide.firstWindow import MyFirstWindow
+from py.FirstTask.FirstSlide.firstWindow import firstSlide
 from py.SecondTask.ui_firstSlide import FirstSlide
 
 
@@ -18,7 +18,7 @@ class New(QMainWindow):
         self.ui.task_2.clicked.connect(self.second_task)
 
     def first_task(self):
-        self.new_window = MyFirstWindow()
+        self.new_window = firstSlide()
         self.new_window.show()
         self.destroy()
 

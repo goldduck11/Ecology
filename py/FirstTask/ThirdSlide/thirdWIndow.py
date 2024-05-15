@@ -2,6 +2,7 @@ import math
 import sys
 
 from PySide6 import QtWidgets
+from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QMainWindow, QApplication, QMessageBox
 
 from py.PropertyFile.PropertySelection import PropertySelection
@@ -10,7 +11,7 @@ from ui.FirstTask.FourthSlide.ui_fourthSlide import Ui_MainWindow
 from data import tab_4_plus, tab_4_minus
 
 
-class MyFirstWindow(QMainWindow):
+class thirdSlide(QMainWindow):
 	text: str
 	gerts: str
 	Lp: float
@@ -19,11 +20,11 @@ class MyFirstWindow(QMainWindow):
 	L: float
 
 	def __init__(self):
-		super(MyFirstWindow, self).__init__()
+		super(thirdSlide, self).__init__()
 		self.ui = Ui_MainWindow()
 		self.ui.setupUi(self)
+		self.ui.label.setPixmap(QPixmap("../../image/firstTask/fourthImage/photo_2024-05-15_21-26-08.jpg"))
 
-		self.show()
 		self.ui.pushButton.clicked.connect(self.continueTask)
 
 	def extract_integer_part(self, num):
@@ -62,8 +63,9 @@ class MyFirstWindow(QMainWindow):
 		self.docade, self.units = self.extract_integer_part(self.Lp)
 		print(tab_4_plus.iloc[self.docade, self.units])
 		self.L = self.Lp + 10 * math.log10(
-			tab_4_plus.iloc[self.docade, self.units] * ((1.2 / 8 * math.pi) + (1.1 / 18 * math.pi) + (1.0 / 32 * math.pi)) + (
-						4 * 3 / P.get_B()))
+			tab_4_plus.iloc[self.docade, self.units] * (
+					(1.2 / (8 * math.pi)) + (1.1 / (18 * math.pi)) + (1.0 / (32 * math.pi))) + (
+					4 * 3 / P.get_B()))
 		print(round(self.L, 2))
 		if (round(self.L, 2) != round(float(self.text.replace(",", ".")), 2)):
 			self.msg = QMessageBox()
@@ -75,4 +77,13 @@ class MyFirstWindow(QMainWindow):
 			self.msg.exec()  # Показываем QMessageBox
 			return
 
-		print("Верный вариант 3")
+		self.destroy()
+		self.msg = QMessageBox()
+		self.msg.setIcon(QMessageBox.Icon.Information)
+		self.msg.setText("Поздравляем!")
+		self.msg.setInformativeText("Вы успешно прошли тест!")  # Установка информационного текста
+		self.msg.setWindowTitle("Поздравляем!")
+		self.msg.setFixedWidth(400)
+		self.msg.exec()  # Показываем QMessageBox
+
+
